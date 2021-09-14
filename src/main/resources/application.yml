@@ -1,0 +1,35 @@
+
+# DataSource Config
+
+spring:
+    datasource:
+        #    driver-class-name: com.mysql.cj.jdbc.Driver
+        driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+        url: jdbc:p6spy:mysql://10.106.27.212:3306/eblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+        username: root
+        password: 123456
+    freemarker:
+        settings:
+            classic_compatible: true
+            datetime_format: yyyy-MM-dd HH:mm
+            number_format: 0.##
+    redis:
+        host: localhost
+        port: 6379
+        password:
+
+
+
+mybatis-plus:
+    mapper-locations: classpath*:/mapper/**Mapper.xml
+file:
+    upload:
+        dir: ${user.dir}/upload
+
+#
+#spring.datasource.url=jdbc:mysql://10.106.27.212:3306/eblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+#spring.datasource.username=root
+#spring.datasource.password=123456
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.datasource.hikari.login-timeout=1000
+#spring.datasource.hikari.maximum-pool-size=30
